@@ -203,7 +203,7 @@ function App() {
             onClick={() => {
               setBusy(true)
               const id = updId.trim()
-              fetch('https://dummyjson.com/products/' + id, {
+              fetch(`${BASE}/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ title: updT }),
