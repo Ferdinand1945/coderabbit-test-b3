@@ -16,6 +16,17 @@ interface Product {
 
 var BASE = 'https://dummyjson.com/products'
 
+/**
+ * Root React component that displays and manages a product list from DummyJSON.
+ *
+ * Renders loading and error states, an interactive UI for searching and fetching a single product,
+ * and simple simulated CRUD controls (add, update, delete). Maintains local state for the
+ * product list, single-product view, form inputs, busy status, and status notes; it loads the
+ * initial product list from the configured BASE endpoint on mount and updates the UI in response
+ * to user actions.
+ *
+ * @returns The component's rendered React element representing the products page.
+ */
 function App() {
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
